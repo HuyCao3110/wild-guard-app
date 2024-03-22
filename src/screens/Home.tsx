@@ -3,15 +3,19 @@ import React from "react";
 import { useAppDispatch } from "../store";
 import { removeUser } from "../store/user.reducer";
 import { Button, Center } from "native-base";
+import TopNavigation from "../components/ui-components/TopNavigation";
 
 const Home = () => {
   const dispatch = useAppDispatch();
   return (
-    <Center flex={1}>
-      <Button onPress={() => dispatch(removeUser())}>
+    <>
+      <TopNavigation title="WildGuard"/>
+      <Center flex={1}>
+        {/* <Button onPress={() => dispatch(removeUser())}>
         Logout
-      </Button>
-    </Center>
+      </Button> */}
+      </Center>
+    </>
   );
 };
 
