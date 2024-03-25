@@ -4,12 +4,7 @@ import { useAppDispatch } from "../store";
 import { removeUser } from "../store/user.reducer";
 import { Button, Center } from "native-base";
 import TopNavigation from "../components/ui-components/TopNavigation";
-import SearchBox from "../components/ui-components/SearchBox";
-import AnimalCard from "../components/ui-components/AnimalCard";
-import SpeciesCard from "../components/ui-components/SpeciesCard";
-import Description from "../components/ui-components/Description";
-import RLAssessment from "../components/ui-components/RLAssessment";
-import PopulationTrend from "../components/ui-components/PopulationTrend";
+import MatureIndividuals from "../components/ui-components/MatureIndividuals";
 
 const Home = () => {
   const dispatch = useAppDispatch();
@@ -20,7 +15,7 @@ const Home = () => {
         {/* <Button onPress={() => dispatch(removeUser())}>
         Logout
       </Button> */}
-      <PopulationTrend/>
+      <MatureIndividuals/>
       </Center>
     </>
   );
