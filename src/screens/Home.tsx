@@ -7,6 +7,7 @@ import TopNavigation from "../components/ui-components/TopNavigation";
 import MatureIndividuals from "../components/ui-components/MatureIndividuals";
 import Habitat from "../components/ui-components/Habitat";
 import Taxonomy from "../components/ui-components/Taxonomy";
+import AssessmentInfo from "../components/ui-components/AssessmentInfo";
 
 const Home = () => {
   const dispatch = useAppDispatch();
@@ -17,7 +18,7 @@ const Home = () => {
         {/* <Button onPress={() => dispatch(removeUser())}>
         Logout
       </Button> */}
-      <Taxonomy/>
+      <AssessmentInfo/>
       </Center>
     </>
   );
