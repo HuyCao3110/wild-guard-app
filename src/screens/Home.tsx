@@ -8,6 +8,7 @@ import SearchBox from "../components/ui-components/SearchBox";
 import AnimalCard from "../components/ui-components/AnimalCard";
 import SpeciesCard from "../components/ui-components/SpeciesCard";
 import Description from "../components/ui-components/Description";
+import RLAssessment from "../components/ui-components/RLAssessment";
 
 const Home = () => {
   const dispatch = useAppDispatch();
@@ -18,7 +19,7 @@ const Home = () => {
         {/* <Button onPress={() => dispatch(removeUser())}>
         Logout
       </Button> */}
-      <Description/>
+      <RLAssessment/>
       </Center>
     </>
   );
