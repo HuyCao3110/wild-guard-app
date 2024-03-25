@@ -12,7 +12,7 @@ const AssessmentInfo = () => {
           Assessment Information
         </Text>
       </Row>
-      <Column>
+      <Column space='2'>
         <Column>
           <Text>IUCN RED LIST CATEGORY AND CRITERIA</Text>
           <Text bold color="#08B364" fontSize="lg">
