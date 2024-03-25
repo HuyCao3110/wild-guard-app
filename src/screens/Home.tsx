@@ -5,6 +5,7 @@ import { removeUser } from "../store/user.reducer";
 import { Button, Center } from "native-base";
 import TopNavigation from "../components/ui-components/TopNavigation";
 import SearchBox from "../components/ui-components/SearchBox";
+import AnimalCard from "../components/ui-components/AnimalCard";
 
 const Home = () => {
   const dispatch = useAppDispatch();
@@ -15,7 +16,7 @@ const Home = () => {
         {/* <Button onPress={() => dispatch(removeUser())}>
         Logout
       </Button> */}
-      <SearchBox/>
+      <AnimalCard/>
       </Center>
     </>
   );
