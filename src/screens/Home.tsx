@@ -11,6 +11,7 @@ import AssessmentInfo from "../components/ui-components/AssessmentInfo";
 import GeographicRange from "../components/ui-components/GeographicRange";
 import Population from "../components/ui-components/Population";
 import ExtendedEcology from "../components/ui-components/ExtendedEcology";
+import Threats from "../components/ui-components/Threats";
 
 const Home = () => {
   const dispatch = useAppDispatch();
@@ -21,7 +22,7 @@ const Home = () => {
         {/* <Button onPress={() => dispatch(removeUser())}>
         Logout
       </Button> */}
-        <ExtendedEcology />
+        <Threats />
       </Center>
     </>
   );
