@@ -10,17 +10,18 @@ import Taxonomy from "../components/ui-components/Taxonomy";
 import AssessmentInfo from "../components/ui-components/AssessmentInfo";
 import GeographicRange from "../components/ui-components/GeographicRange";
 import Population from "../components/ui-components/Population";
+import ExtendedEcology from "../components/ui-components/ExtendedEcology";
 
 const Home = () => {
   const dispatch = useAppDispatch();
   return (
     <>
-      <TopNavigation title="WildGuard"/>
+      <TopNavigation title="WildGuard" />
       <Center flex={1}>
         {/* <Button onPress={() => dispatch(removeUser())}>
         Logout
       </Button> */}
-      <Population/>
+        <ExtendedEcology />
       </Center>
     </>
   );
