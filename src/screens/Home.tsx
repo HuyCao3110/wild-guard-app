@@ -9,6 +9,7 @@ import Habitat from "../components/ui-components/Habitat";
 import Taxonomy from "../components/ui-components/Taxonomy";
 import AssessmentInfo from "../components/ui-components/AssessmentInfo";
 import GeographicRange from "../components/ui-components/GeographicRange";
+import Population from "../components/ui-components/Population";
 
 const Home = () => {
   const dispatch = useAppDispatch();
@@ -19,7 +20,7 @@ const Home = () => {
         {/* <Button onPress={() => dispatch(removeUser())}>
         Logout
       </Button> */}
-      <GeographicRange/>
+      <Population/>
       </Center>
     </>
   );
