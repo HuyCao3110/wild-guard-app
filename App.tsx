@@ -4,7 +4,7 @@ import { NativeBaseProvider } from "native-base";
 import appTheme from "./src/theme";
 import { Provider } from "react-redux";
 import store from "./src/store";
-import TopNavigation from "./src/components/ui-components/TopNavigation";
+import TopNavigation from "./src/components/ui-components/information/TopNavigation";
 
 export default function App() {
   return (

@@ -3,17 +3,18 @@ import React from "react";
 import { useAppDispatch } from "../store";
 import { removeUser } from "../store/user.reducer";
 import { Button, Center } from "native-base";
-import TopNavigation from "../components/ui-components/TopNavigation";
-import MatureIndividuals from "../components/ui-components/MatureIndividuals";
-import Habitat from "../components/ui-components/Habitat";
-import Taxonomy from "../components/ui-components/Taxonomy";
-import AssessmentInfo from "../components/ui-components/AssessmentInfo";
-import GeographicRange from "../components/ui-components/GeographicRange";
-import Population from "../components/ui-components/Population";
-import ExtendedEcology from "../components/ui-components/ExtendedEcology";
-import Threats from "../components/ui-components/Threats";
-import UseTrade from "../components/ui-components/UseTrade";
-import Conservation from "../components/ui-components/Conservation";
+import TopNavigation from "../components/ui-components/information/TopNavigation";
+import MatureIndividuals from "../components/ui-components/information/MatureIndividuals";
+import Habitat from "../components/ui-components/information/Habitat";
+import Taxonomy from "../components/ui-components/information/Taxonomy";
+import AssessmentInfo from "../components/ui-components/information/AssessmentInfo";
+import GeographicRange from "../components/ui-components/information/GeographicRange";
+import Population from "../components/ui-components/information/Population";
+import ExtendedEcology from "../components/ui-components/information/ExtendedEcology";
+import Threats from "../components/ui-components/information/Threats";
+import UseTrade from "../components/ui-components/information/UseTrade";
+import Conservation from "../components/ui-components/information/Conservation";
+import TaxonomyCheck from "../components/ui-components/others/TaxonomyCheck";
 
 const Home = () => {
   const dispatch = useAppDispatch();
@@ -24,7 +25,7 @@ const Home = () => {
         {/* <Button onPress={() => dispatch(removeUser())}>
         Logout
       </Button> */}
-        <Conservation />
+        <TaxonomyCheck />
       </Center>
     </>
   );
