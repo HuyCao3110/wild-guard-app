@@ -15,6 +15,7 @@ import Threats from "../components/ui-components/information/Threats";
 import UseTrade from "../components/ui-components/information/UseTrade";
 import Conservation from "../components/ui-components/information/Conservation";
 import TaxonomyCheck from "../components/ui-components/others/TaxonomyCheck";
+import Category from "../components/ui-components/others/Category";
 
 const Home = () => {
   const dispatch = useAppDispatch();
@@ -25,7 +26,7 @@ const Home = () => {
         {/* <Button onPress={() => dispatch(removeUser())}>
         Logout
       </Button> */}
-        <TaxonomyCheck />
+        <Category />
       </Center>
     </>
   );
