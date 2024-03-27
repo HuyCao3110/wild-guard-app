@@ -8,11 +8,11 @@ type Props = {
 
 const AnimalCard = () => {
   return (
-    <Box h='80' rounded='2xl' borderWidth='1'>
+    <Box rounded='2xl' borderWidth='1' w='100%'>
       <Column >
-        <Image roundedTop='2xl' height='40' alt='' source={require('../../../assets/albatross.png')}/>
+        <Image roundedTop='2xl' height='40' alt='' width='100%' source={require('../../../../assets/albatross.png')}/>
       </Column>
-      <Column flex='1' justifyContent='space-between' p='3' bg='white' roundedBottom='2xl'>
+      <Column justifyContent='space-between' space='3' p='3' bg='white' roundedBottom='2xl'>
         <Row justifyContent='space-between'>
           <Text>ANIMALIA - AVES</Text>
           <Text>GLOBAL</Text>
