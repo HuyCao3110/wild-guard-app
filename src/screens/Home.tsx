@@ -6,6 +6,7 @@ import { Button, Center } from "native-base";
 import TopNavigation from "../components/ui-components/information/TopNavigation";
 
 import NewsCard from "../components/ui-components/others/NewsCard";
+import Game from "../components/ui-components/others/Game";
 
 const Home = () => {
   const dispatch = useAppDispatch();
@@ -16,7 +17,7 @@ const Home = () => {
         {/* <Button onPress={() => dispatch(removeUser())}>
         Logout
       </Button> */}
-        <NewsCard />
+        <Game />
       </Center>
     </>
   );
