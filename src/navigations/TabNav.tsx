@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../screens/Home";
-import Notification from "../screens/Notification";
+import Games from "../screens/Games";
 import News from "../screens/News";
 import { Icon } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
@@ -31,16 +31,28 @@ const TabNav = () => {
         name="News"
         component={News}
         options={{
-          tabBarIcon: () => (
-            <Ionicons name="newspaper" color="#08B364" size={25} />
+          tabBarIcon: ({ focused }) => (
+            <Ionicons
+              name="newspaper"
+              color={focused ? "#08B364" : "#A3A3A3"}
+              size={25}
+            />
           ),
+          tabBarActiveTintColor: "#08B364",
         }}
       />
       <Tab.Screen
-        name="Notification"
-        component={Notification}
+        name="Games"
+        component={Games}
         options={{
-          tabBarIcon: () => <Ionicons name="home" color="#08B364" size={25} />,
+          tabBarIcon: ({ focused }) => (
+            <Ionicons
+              name="game-controller"
+              color={focused ? "#08B364" : "#A3A3A3"}
+              size={25}
+            />
+          ),
+          tabBarActiveTintColor: "#08B364",
         }}
       />
     </Tab.Navigator>
