@@ -7,6 +7,7 @@ import TopNavigation from "../components/ui-components/information/TopNavigation
 
 import NewsCard from "../components/ui-components/others/NewsCard";
 import Game from "../components/ui-components/others/Game";
+import RankStar from "../components/ui-components/others/RankStar";
 
 const Home = () => {
   const dispatch = useAppDispatch();
@@ -17,7 +18,7 @@ const Home = () => {
         {/* <Button onPress={() => dispatch(removeUser())}>
         Logout
       </Button> */}
-        <Game />
+        <RankStar type="silver"/>
       </Center>
     </>
   );
