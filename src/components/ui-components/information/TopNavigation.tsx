@@ -1,6 +1,6 @@
 import { StyleSheet, View } from "react-native";
 import React from "react";
-import { Box, Icon, Stack, StatusBar, Text } from "native-base";
+import { Box, Icon, Row, Stack, StatusBar, Text } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 
 type Props = {
@@ -12,13 +12,12 @@ const TopNavigation = ({ hasBack, title }: Props) => {
   return (
     <>
       <StatusBar backgroundColor="#4CAF50" barStyle="light-content" />
-      <Box h="16" backgroundColor="#4CAF50" justifyContent="flex-end">
-        <Box
-          flexDirection="row"
+      <Box h="20" backgroundColor="#4CAF50" justifyContent="flex-end">
+        <Row
           justifyContent="space-between"
           alignItems="center"
           px="1"
-          pb="2"
+          pb="7"
         >
           <Box w="3">
             {hasBack && (
@@ -29,7 +28,7 @@ const TopNavigation = ({ hasBack, title }: Props) => {
             {title}
           </Text>
           <Box w="3"></Box>
-        </Box>
+        </Row>
       </Box>
     </>
   );

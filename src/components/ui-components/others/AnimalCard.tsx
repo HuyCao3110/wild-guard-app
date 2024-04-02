@@ -3,12 +3,12 @@ import { Box, Text, Image, Badge, Column, Row, Icon } from 'native-base';
 import { AntDesign } from '@expo/vector-icons';
 
 type Props = {
-
+  
 }
 
 const AnimalCard = () => {
   return (
-    <Box rounded='2xl' borderWidth='1' w='100%'>
+    <Box rounded='2xl' borderWidth='1' borderColor='muted.400' w='100%'>
       <Column >
         <Image roundedTop='2xl' height='40' alt='' width='100%' source={require('../../../../assets/albatross.png')}/>
       </Column>

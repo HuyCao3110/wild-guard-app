@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { Box, Divider, Icon, Input } from "native-base";
-import { Fontisto, MaterialIcons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 
 const SearchBox = () => {
   return (
@@ -14,7 +14,7 @@ const SearchBox = () => {
         fontSize="md"
         InputLeftElement={
           <Icon
-            as={<MaterialIcons name="search" />}
+            as={<Ionicons name="search" />}
             size="lg"
             ml="3"
             color="gray.400"
@@ -24,7 +24,8 @@ const SearchBox = () => {
           <>
             <Divider orientation="vertical" mx="3" h="70%" />
             <Icon
-              as={<MaterialIcons name="tune" />}
+              as={Ionicons}
+              name="options-outline"
               size="lg"
               mr="3"
               color="gray.400"
