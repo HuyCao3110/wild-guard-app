@@ -3,7 +3,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../screens/Home";
 import Notification from "../screens/Notification";
-import Profile from "../screens/Profile";
+import News from "../screens/News";
 import { Icon } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 // import { BottomTabsParams } from "./types";
@@ -28,8 +28,8 @@ const TabNav = () => {
         }}
       />
       <Tab.Screen
-        name="Profile"
-        component={Profile}
+        name="News"
+        component={News}
         options={{
           tabBarIcon: () => (
             <Ionicons name="newspaper" color="#08B364" size={25} />
