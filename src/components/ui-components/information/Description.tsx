@@ -4,7 +4,7 @@ import { Column, Text } from "native-base";
 
 const Description = () => {
   return (
-    <Column space='4' w='100%' bg='white' p='3'>
+    <Column space='4' w='100%' bg='white' py='3' px='5'>
       <Column>
         <Text bold fontSize='2xl'>Wandering Albatross</Text>
         <Text italic>Diomedea exulans</Text>

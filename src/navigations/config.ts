@@ -8,3 +8,9 @@ export type AuthStackParams = {
   Login: undefined;
   SignUp: undefined;
 };
+
+export type HomeStackParams = {
+  Home: undefined;
+  AnimalDetails: undefined;
+  Filter: undefined;
+};

@@ -21,29 +21,36 @@ import SearchBox from "../components/ui-components/information/SearchBox";
 import { Ionicons } from "@expo/vector-icons";
 import AnimalCard from "../components/ui-components/others/AnimalCard";
 import SpeciesCard from "../components/ui-components/others/SpeciesCard";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { HomeStackParams } from "../navigations/config";
 
-const Home = () => {
+type Props = {} & NativeStackScreenProps<HomeStackParams>;
+
+const Home = ({ navigation }: Props) => {
   const dispatch = useAppDispatch();
+  function toAnimalDetails() {
+    navigation.navigate("AnimalDetails");
+  }
   return (
     <>
       <ScrollView>
         <Stack>
-          <TopNavigation title="WildGuard" />
+          <TopNavigation title="WildGuard" searchBox />
         </Stack>
         <Center w="100%" zIndex={1} position="absolute" top="60px">
           <SearchBox />
         </Center>
         <Stack h="12" bg="white" />
 
-        <Column zIndex={0} flex={1} bg="white" space="5" px='5'>
+        <Column zIndex={0} flex={1} bg="white" space="5" px="5">
           <Row justifyContent="space-between" alignItems="center">
             <Text fontSize="md">Amazing species</Text>
-            <Row alignItems="center" space='1'>
-              <Text fontSize='xs'>See more</Text>
+            <Row alignItems="center" space="1">
+              <Text fontSize="xs">See more</Text>
               <Icon as={Ionicons} name="arrow-forward-outline" />
             </Row>
           </Row>
-          <AnimalCard />
+          <AnimalCard press={toAnimalDetails} />
           <AnimalCard />
           <AnimalCard />
           <AnimalCard />
@@ -57,7 +64,7 @@ const Home = () => {
               That is still 28% of all assessed species.
             </Text>
           </Column>
-          <Column space='2'>
+          <Column space="2">
             <SpeciesCard />
             <SpeciesCard />
             <SpeciesCard />

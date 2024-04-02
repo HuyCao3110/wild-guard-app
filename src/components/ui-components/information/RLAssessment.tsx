@@ -4,7 +4,7 @@ import { Column, Text } from "native-base";
 
 const RLAssessment = () => {
   return (
-    <Column w='100%' space='2' p='3'  bg='white'>
+    <Column w='100%' space='2' py='3' px='5' bg='white'>
       <Text bold fontSize='md'>THE RED LIST ASSESSMENT</Text>
       <Column>
         <Text>LAST ASSESSED</Text>
