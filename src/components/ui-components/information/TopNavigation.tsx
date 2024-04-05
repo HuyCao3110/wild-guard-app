@@ -17,7 +17,7 @@ const TopNavigation = ({ hasBack, title, searchBox, goBack }: Props) => {
     <>
       <StatusBar backgroundColor="#4CAF50" barStyle="light-content" />
       <Box
-        h={searchBox ? "20" : "16"}
+        h={searchBox ? "20" : "12"}
         backgroundColor="#4CAF50"
         justifyContent="flex-end"
       >

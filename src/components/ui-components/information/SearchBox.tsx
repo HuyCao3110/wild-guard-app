@@ -1,9 +1,13 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { Box, Divider, Icon, Input } from "native-base";
+import { Box, Divider, Icon, Input, Pressable } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 
-const SearchBox = () => {
+type Props = {
+  action?: () => void;
+};
+
+const SearchBox = ({action}:Props) => {
   return (
     <Box>
       <Input
@@ -23,13 +27,15 @@ const SearchBox = () => {
         InputRightElement={
           <>
             <Divider orientation="vertical" mx="3" h="70%" />
-            <Icon
-              as={Ionicons}
-              name="options-outline"
-              size="lg"
-              mr="3"
-              color="gray.400"
-            />
+            <Pressable onPress={action}>
+              <Icon
+                as={Ionicons}
+                name="options-outline"
+                size="lg"
+                mr="3"
+                color="gray.400"
+              />
+            </Pressable>
           </>
         }
         backgroundColor="white"
