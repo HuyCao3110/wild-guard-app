@@ -14,3 +14,8 @@ export type HomeStackParams = {
   AnimalDetails: undefined;
   Filter: undefined;
 };
+
+export type NewsStackParams = {
+  News: undefined;
+  NewsDetail: undefined;
+};
