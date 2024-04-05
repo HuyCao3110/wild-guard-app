@@ -28,7 +28,7 @@ function renderCategoryTag({item}:any){
 
 const Category = () => {
   return (
-    <Column space="2" w="100%" bg="white" p="3">
+    <Column space="2" w="100%" bg="white" >
       <FlatList data={DATA} renderItem={renderCategoryTag}/>
     </Column>
   );

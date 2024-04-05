@@ -28,8 +28,13 @@ type Props = {} & NativeStackScreenProps<HomeStackParams>;
 
 const Home = ({ navigation }: Props) => {
   const dispatch = useAppDispatch();
+
   function toAnimalDetails() {
     navigation.navigate("AnimalDetails");
+  }
+
+  function toFilterScreen(){
+    navigation.navigate('Filter')
   }
   return (
     <>
@@ -38,7 +43,7 @@ const Home = ({ navigation }: Props) => {
           <TopNavigation title="WildGuard" searchBox />
         </Stack>
         <Center w="100%" zIndex={1} position="absolute" top="60px">
-          <SearchBox />
+          <SearchBox action={toFilterScreen}/>
         </Center>
         <Stack h="12" bg="white" />
 
