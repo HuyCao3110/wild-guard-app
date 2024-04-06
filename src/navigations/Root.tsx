@@ -13,6 +13,7 @@ import NewsDetail from "../screens/root/NewsDetail";
 import ChooseAnswer from "../screens/root/ChooseAnswer";
 import ChooseImage from "../screens/root/ChooseImage";
 import FillWord from "../screens/root/FillWord";
+import MatchPicture from "../screens/root/MatchPicture";
 
 const Stack = createNativeStackNavigator();
 
@@ -32,12 +33,11 @@ const Root = () => {
           {user && <Stack.Screen name="TabNav" component={TabNav} />}
           <Stack.Screen name="Filter" component={Filter} />
           <Stack.Screen name="AnimalDetails" component={AnimalDetails} />
-          <Stack.Screen name="NewsDetail" component={NewsDetail}/>
-          <Stack.Screen name="ChooseAnswer" component={ChooseAnswer}/>
-          <Stack.Screen name="ChooseImage" component={ChooseImage}/>
-          <Stack.Screen name="FillWord" component={FillWord}/>
-
-
+          <Stack.Screen name="NewsDetail" component={NewsDetail} />
+          <Stack.Screen name="ChooseAnswer" component={ChooseAnswer} />
+          <Stack.Screen name="ChooseImage" component={ChooseImage} />
+          <Stack.Screen name="FillWord" component={FillWord} />
+          <Stack.Screen name="MatchPicture" component={MatchPicture} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

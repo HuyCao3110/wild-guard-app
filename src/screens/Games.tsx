@@ -39,7 +39,7 @@ const Games = ({ navigation }: Props) => {
         </GameTag>
         <GameTag icon="images" goTo={toChooseImage}>Choose the right image</GameTag>
         <GameTag icon="pencil" goTo={toFillWord}>Fill in words</GameTag>
-        <GameTag icon="magnet">Matching pictures</GameTag>
+        <GameTag icon="magnet" goTo={toMatchPicture}>Matching pictures</GameTag>
       </Box>
     </>
   );
