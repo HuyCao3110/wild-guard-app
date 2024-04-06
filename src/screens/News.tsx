@@ -22,7 +22,7 @@ const News = ({ navigation }: Props) => {
     <>
       <TopNavigation title="News" />
       <ScrollView>
-        <Column bg="white" px="5" pt="5" space="3">
+        <Column bg="white" px="5" pt="5" pb="3" space="3">
           <NewsCard goTo={toNewsDetail} />
           <NewsCard />
           <NewsCard />

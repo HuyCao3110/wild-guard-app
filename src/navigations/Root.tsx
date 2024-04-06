@@ -6,7 +6,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import TabNav from "./TabNav";
 import ErrorOverlay from "../components/ErrorOverlay";
 import { useAppSelector } from "../store";
-import Chat from "../screens/Chat";
+import Chat from "../screens/Tropthy";
 import Filter from "../screens/root/Filter";
 import AnimalDetails from "../screens/root/AnimalDetails";
 import NewsDetail from "../screens/root/NewsDetail";

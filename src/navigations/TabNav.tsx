@@ -7,6 +7,7 @@ import News from "../screens/News";
 import { Icon } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 import { BottomTabsParams } from "./config";
+import Trophy from "../screens/Tropthy";
 // import { BottomTabsParams } from "./types";
 
 const Tab = createBottomTabNavigator<BottomTabsParams>();
@@ -49,6 +50,20 @@ const TabNav = () => {
           tabBarIcon: ({ focused }) => (
             <Ionicons
               name="game-controller"
+              color={focused ? "#08B364" : "#A3A3A3"}
+              size={25}
+            />
+          ),
+          tabBarActiveTintColor: "#08B364",
+        }}
+      />
+      <Tab.Screen
+        name="Trophy"
+        component={Trophy}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <Ionicons
+              name="trophy"
               color={focused ? "#08B364" : "#A3A3A3"}
               size={25}
             />
