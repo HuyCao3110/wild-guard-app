@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import Game from "../components/ui-components/others/Game";
 import { Box } from "native-base";
 import TopNavigation from "../components/ui-components/information/TopNavigation";
 import GameTag from "../components/ui-components/others/GameTag";
@@ -19,6 +18,10 @@ const Games = ({ navigation }: Props) => {
     navigation.navigate("ChooseAnswer");
   }
 
+  function toChooseImage() {
+    navigation.navigate("ChooseImage");
+  }
+
   return (
     <>
       <TopNavigation title="Games" />
@@ -26,7 +29,7 @@ const Games = ({ navigation }: Props) => {
         <GameTag icon="image" goTo={toChooseAnswer}>
           Choose the correct answer
         </GameTag>
-        <GameTag icon="images">Choose the right image</GameTag>
+        <GameTag icon="images" goTo={toChooseImage}>Choose the right image</GameTag>
         <GameTag icon="pencil">Fill in words</GameTag>
         <GameTag icon="magnet">Matching pictures</GameTag>
       </Box>

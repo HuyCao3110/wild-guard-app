@@ -11,6 +11,7 @@ import Filter from "../screens/root/Filter";
 import AnimalDetails from "../screens/root/AnimalDetails";
 import NewsDetail from "../screens/root/NewsDetail";
 import ChooseAnswer from "../screens/root/ChooseAnswer";
+import ChooseImage from "../screens/root/ChooseImage";
 
 const Stack = createNativeStackNavigator();
 
@@ -32,6 +33,8 @@ const Root = () => {
           <Stack.Screen name="AnimalDetails" component={AnimalDetails} />
           <Stack.Screen name="NewsDetail" component={NewsDetail}/>
           <Stack.Screen name="ChooseAnswer" component={ChooseAnswer}/>
+          <Stack.Screen name="ChooseImage" component={ChooseImage}/>
+
         </Stack.Navigator>
       </NavigationContainer>
     </>
