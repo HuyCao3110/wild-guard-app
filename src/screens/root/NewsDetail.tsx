@@ -1,9 +1,9 @@
 import { StyleSheet, View } from "react-native";
 import React from "react";
-import TopNavigation from "../information/TopNavigation";
+import TopNavigation from "../../components/ui-components/information/TopNavigation";
 import { Column, Text, Row, Center, Image, ScrollView } from "native-base";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { NewsStackParams } from "../../../navigations/config";
+import { NewsStackParams } from "../../navigations/config";
 
 type Props = {} & NativeStackScreenProps<NewsStackParams>;
 
@@ -27,7 +27,7 @@ const NewsDetail = ({ navigation }: Props) => {
             <Image
               w="100%"
               alt=""
-              source={require("../../../../assets/shutterstock.png")}
+              source={require("../../../assets/shutterstock.png")}
             />
           </Center>
           <Column space="3">

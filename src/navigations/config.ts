@@ -1,7 +1,8 @@
 export type BottomTabsParams = {
   Home: undefined;
-  Profile: {};
-  Notification: {};
+  News: undefined;
+  Games: undefined;
+  Trophy: undefined;
 };
 
 export type AuthStackParams = {
@@ -10,12 +11,20 @@ export type AuthStackParams = {
 };
 
 export type HomeStackParams = {
-  Home: undefined;
+  HomeScreen: undefined;
   AnimalDetails: undefined;
   Filter: undefined;
 };
 
 export type NewsStackParams = {
-  News: undefined;
+  NewsScreen: undefined;
   NewsDetail: undefined;
+};
+
+export type GameStackParams = {
+  GameScreen: undefined;
+  ChooseAnswer: undefined;
+  ChooseImage: undefined;
+  FillWord: undefined;
+  MatchPicture: undefined;
 };

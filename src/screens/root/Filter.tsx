@@ -17,6 +17,7 @@ import TaxonomyCheck from "../../components/ui-components/others/TaxonomyCheck";
 import Category from "../../components/ui-components/others/Category";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { HomeStackParams } from "../../navigations/config";
+import PrimaryButton from "../../components/ui-components/others/PrimaryButton";
 
 type Props = {} & NativeStackScreenProps<HomeStackParams>;
 
@@ -25,7 +26,7 @@ const Filter = ({ navigation }: Props) => {
     <>
       <StatusBar backgroundColor="#4CAF50" barStyle="light-content" />
       <ScrollView>
-        <Column flex="1" pt="5" bg="white" px="5">
+        <Column flex="1" pt="5" bg="white" px="5" pb="7">
           <Row justifyContent="space-between" alignItems="center">
             <Row alignItems="center" space="2">
               <Pressable
@@ -67,9 +68,7 @@ const Filter = ({ navigation }: Props) => {
           <TaxonomyCheck />
           <Divider mt="1" />
           <Category />
-          <Button mt="10" bg="#08B364">
-            Apply
-          </Button>
+          <PrimaryButton mt='10' label="Apply"/>
         </Column>
       </ScrollView>
     </>
