@@ -22,6 +22,14 @@ const Games = ({ navigation }: Props) => {
     navigation.navigate("ChooseImage");
   }
 
+  function toFillWord() {
+    navigation.navigate("FillWord");
+  }
+
+  function toMatchPicture() {
+    navigation.navigate("MatchPicture");
+  }
+
   return (
     <>
       <TopNavigation title="Games" />
@@ -30,7 +38,7 @@ const Games = ({ navigation }: Props) => {
           Choose the correct answer
         </GameTag>
         <GameTag icon="images" goTo={toChooseImage}>Choose the right image</GameTag>
-        <GameTag icon="pencil">Fill in words</GameTag>
+        <GameTag icon="pencil" goTo={toFillWord}>Fill in words</GameTag>
         <GameTag icon="magnet">Matching pictures</GameTag>
       </Box>
     </>

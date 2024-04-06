@@ -4,19 +4,29 @@ import TopNavigation from "../../components/ui-components/information/TopNavigat
 import { Box, Column, Row, Text, Image, Center, Icon } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 import PrimaryButton from "../../components/ui-components/others/PrimaryButton";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { RootStackParams } from "../../navigations/config";
 
-const ChooseImage = () => {
+type Props = {} & NativeStackScreenProps<RootStackParams>;
+
+const ChooseImage = ({ navigation }: Props) => {
+  function backtoGames() {
+    navigation.goBack();
+  }
+
   return (
     <>
-      <TopNavigation hasBack title="Choose the right image" />
-      <Column flex='1' justifyContent='space-between' pt='5' pb='7' px='5'>
+      <TopNavigation hasBack title="Choose the right image" goBack={backtoGames} />
+      <Column flex="1" justifyContent="space-between" pt="5" pb="7" px="5">
         <Column>
-          <Text fontSize='lg' bold>Câu 1</Text>
+          <Text fontSize="lg" bold>
+            Câu 1
+          </Text>
           <Text>
             Lorem ipsum dolor sit amet consectetur. Sagittis sem nisl mauris
             pretium. Tellus aliquet porta nascetur sit neque.
           </Text>
-          <Center mt='10'>
+          <Center mt="10">
             <Row space="3">
               <Column space="3">
                 <Box>
@@ -65,7 +75,7 @@ const ChooseImage = () => {
             </Row>
           </Center>
         </Column>
-        <PrimaryButton label="Next"/>
+        <PrimaryButton label="Next" />
       </Column>
     </>
   );
