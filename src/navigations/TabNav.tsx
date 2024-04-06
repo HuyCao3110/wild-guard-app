@@ -6,9 +6,6 @@ import Games from "../screens/Games";
 import News from "../screens/News";
 import { Icon } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
-import HomeStack from "./HomeStack";
-import NewsStack from "./NewsStack";
-import GameStack from "./GameStack";
 import { BottomTabsParams } from "./config";
 // import { BottomTabsParams } from "./types";
 
@@ -19,7 +16,7 @@ const TabNav = () => {
     <Tab.Navigator screenOptions={{ headerShown: false }}>
       <Tab.Screen
         name="Home"
-        component={HomeStack}
+        component={Home}
         options={{
           tabBarIcon: ({ focused }) => (
             <Ionicons
@@ -33,7 +30,7 @@ const TabNav = () => {
       />
       <Tab.Screen
         name="News"
-        component={NewsStack}
+        component={News}
         options={{
           tabBarIcon: ({ focused }) => (
             <Ionicons
@@ -47,7 +44,7 @@ const TabNav = () => {
       />
       <Tab.Screen
         name="Games"
-        component={GameStack}
+        component={Games}
         options={{
           tabBarIcon: ({ focused }) => (
             <Ionicons

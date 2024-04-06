@@ -7,6 +7,10 @@ import TabNav from "./TabNav";
 import ErrorOverlay from "../components/ErrorOverlay";
 import { useAppSelector } from "../store";
 import Chat from "../screens/Chat";
+import Filter from "../screens/root/Filter";
+import AnimalDetails from "../screens/root/AnimalDetails";
+import NewsDetail from "../screens/root/NewsDetail";
+import ChooseAnswer from "../screens/root/ChooseAnswer";
 
 const Stack = createNativeStackNavigator();
 
@@ -24,6 +28,10 @@ const Root = () => {
         >
           {!user && <Stack.Screen name="Auth" component={AuthStack} />}
           {user && <Stack.Screen name="TabNav" component={TabNav} />}
+          <Stack.Screen name="Filter" component={Filter} />
+          <Stack.Screen name="AnimalDetails" component={AnimalDetails} />
+          <Stack.Screen name="NewsDetail" component={NewsDetail}/>
+          <Stack.Screen name="ChooseAnswer" component={ChooseAnswer}/>
         </Stack.Navigator>
       </NavigationContainer>
     </>

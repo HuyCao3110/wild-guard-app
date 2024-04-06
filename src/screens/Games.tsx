@@ -5,21 +5,27 @@ import { Box } from "native-base";
 import TopNavigation from "../components/ui-components/information/TopNavigation";
 import GameTag from "../components/ui-components/others/GameTag";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { GameStackParams } from "../navigations/config";
+import { BottomTabsParams, RootStackParams } from "../navigations/config";
+import { CompositeScreenProps } from "@react-navigation/native";
+import { BottomTabScreenProps } from "@react-navigation/bottom-tabs";
 
-type Props = {} & NativeStackScreenProps<GameStackParams>;
+type Props = {} & CompositeScreenProps<
+  BottomTabScreenProps<BottomTabsParams>,
+  NativeStackScreenProps<RootStackParams>
+>;
 
 const Games = ({ navigation }: Props) => {
-
-  function toChooseAnswer(){
-    navigation.navigate('ChooseAnswer')
+  function toChooseAnswer() {
+    navigation.navigate("ChooseAnswer");
   }
 
   return (
     <>
       <TopNavigation title="Games" />
       <Box bg="white" flex="1" px="5" pt="10">
-        <GameTag icon="image" goTo={toChooseAnswer}>Choose the correct answer</GameTag>
+        <GameTag icon="image" goTo={toChooseAnswer}>
+          Choose the correct answer
+        </GameTag>
         <GameTag icon="images">Choose the right image</GameTag>
         <GameTag icon="pencil">Fill in words</GameTag>
         <GameTag icon="magnet">Matching pictures</GameTag>

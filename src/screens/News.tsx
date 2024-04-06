@@ -4,14 +4,18 @@ import { Column, ScrollView } from "native-base";
 import TopNavigation from "../components/ui-components/information/TopNavigation";
 import NewsCard from "../components/ui-components/others/NewsCard";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { NewsStackParams } from "../navigations/config";
+import { BottomTabsParams, RootStackParams } from "../navigations/config";
+import { CompositeScreenProps } from "@react-navigation/native";
+import { BottomTabScreenProps } from "@react-navigation/bottom-tabs";
 
-type Props = {} & NativeStackScreenProps<NewsStackParams>
+type Props = {} & CompositeScreenProps<
+  BottomTabScreenProps<BottomTabsParams>,
+  NativeStackScreenProps<RootStackParams>
+>;
 
-const News = ({navigation}:Props) => {
-
-  function toNewsDetail(){
-    navigation.navigate('NewsDetail')
+const News = ({ navigation }: Props) => {
+  function toNewsDetail() {
+    navigation.navigate("NewsDetail");
   }
 
   return (

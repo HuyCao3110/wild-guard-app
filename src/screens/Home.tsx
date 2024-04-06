@@ -22,9 +22,14 @@ import { Ionicons } from "@expo/vector-icons";
 import AnimalCard from "../components/ui-components/others/AnimalCard";
 import SpeciesCard from "../components/ui-components/others/SpeciesCard";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { HomeStackParams } from "../navigations/config";
+import { CompositeScreenProps } from "@react-navigation/native";
+import { BottomTabsParams, RootStackParams } from "../navigations/config";
+import { BottomTabScreenProps } from "@react-navigation/bottom-tabs";
 
-type Props = {} & NativeStackScreenProps<HomeStackParams>;
+type Props = {} & CompositeScreenProps<
+  BottomTabScreenProps<BottomTabsParams>,
+  NativeStackScreenProps<RootStackParams>
+>;
 
 const Home = ({ navigation }: Props) => {
   const dispatch = useAppDispatch();
@@ -33,8 +38,8 @@ const Home = ({ navigation }: Props) => {
     navigation.navigate("AnimalDetails");
   }
 
-  function toFilterScreen(){
-    navigation.navigate('Filter')
+  function toFilterScreen() {
+    navigation.navigate("Filter");
   }
   return (
     <>
@@ -43,7 +48,7 @@ const Home = ({ navigation }: Props) => {
           <TopNavigation title="WildGuard" searchBox />
         </Stack>
         <Center w="100%" zIndex={1} position="absolute" top="60px">
-          <SearchBox action={toFilterScreen}/>
+          <SearchBox action={toFilterScreen} />
         </Center>
         <Stack h="12" bg="white" />
 

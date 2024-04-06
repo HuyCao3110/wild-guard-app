@@ -5,9 +5,9 @@ import { Column, Text, Image, Radio, Center, Row, Icon } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 import PrimaryButton from "../../components/ui-components/others/PrimaryButton";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { GameStackParams } from "../../navigations/config";
+import { RootStackParams } from "../../navigations/config";
 
-type Props = {} & NativeStackScreenProps<GameStackParams>;
+type Props = {} & NativeStackScreenProps<RootStackParams>;
 
 const ChooseAnswer = ({navigation}:Props) => {
 

@@ -3,9 +3,9 @@ import React from "react";
 import TopNavigation from "../../components/ui-components/information/TopNavigation";
 import { Column, Text, Row, Center, Image, ScrollView } from "native-base";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { NewsStackParams } from "../../navigations/config";
+import { RootStackParams } from "../../navigations/config";
 
-type Props = {} & NativeStackScreenProps<NewsStackParams>;
+type Props = {} & NativeStackScreenProps<RootStackParams>;
 
 const NewsDetail = ({ navigation }: Props) => {
   function toNews() {

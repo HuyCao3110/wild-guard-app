@@ -10,19 +10,11 @@ export type AuthStackParams = {
   SignUp: undefined;
 };
 
-export type HomeStackParams = {
-  HomeScreen: undefined;
-  AnimalDetails: undefined;
+export type RootStackParams = {
+  TabNav: undefined;
   Filter: undefined;
-};
-
-export type NewsStackParams = {
-  NewsScreen: undefined;
+  AnimalDetails: undefined;
   NewsDetail: undefined;
-};
-
-export type GameStackParams = {
-  GameScreen: undefined;
   ChooseAnswer: undefined;
   ChooseImage: undefined;
   FillWord: undefined;

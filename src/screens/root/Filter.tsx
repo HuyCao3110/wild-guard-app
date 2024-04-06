@@ -16,10 +16,10 @@ import { Ionicons } from "@expo/vector-icons";
 import TaxonomyCheck from "../../components/ui-components/others/TaxonomyCheck";
 import Category from "../../components/ui-components/others/Category";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { HomeStackParams } from "../../navigations/config";
+import { RootStackParams } from "../../navigations/config";
 import PrimaryButton from "../../components/ui-components/others/PrimaryButton";
 
-type Props = {} & NativeStackScreenProps<HomeStackParams>;
+type Props = {} & NativeStackScreenProps<RootStackParams>;
 
 const Filter = ({ navigation }: Props) => {
   return (

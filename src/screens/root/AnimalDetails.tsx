@@ -16,32 +16,37 @@ import Threats from "../../components/ui-components/information/Threats";
 import UseTrade from "../../components/ui-components/information/UseTrade";
 import Conservation from "../../components/ui-components/information/Conservation";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { HomeStackParams } from "../../navigations/config";
+import { RootStackParams } from "../../navigations/config";
 
-type Props = {} & NativeStackScreenProps<HomeStackParams>
+type Props = {} & NativeStackScreenProps<RootStackParams>;
 
-const AnimalDetails = ({navigation}:Props) => {
+const AnimalDetails = ({ navigation }: Props) => {
   return (
     <>
-      <TopNavigation hasBack goBack={()=> {navigation.goBack()}} />
+      <TopNavigation
+        hasBack
+        goBack={() => {
+          navigation.goBack();
+        }}
+      />
       <ScrollView>
-        <Column bg="white" pt='7'>
+        <Column bg="white" pt="7">
           <Center>
             <Image alt="" source={require("../../../assets/albatross.png")} />
           </Center>
           <Description />
-          <RLAssessment/>
-          <PopulationTrend/>
-          <MatureIndividuals/>
-          <Habitat/>
-          <Taxonomy/>
-          <AssessmentInfo/>
-          <GeographicRange/>
-          <Population/>
-          <ExtendedEcology/>
-          <Threats/>
-          <UseTrade/>
-          <Conservation/>
+          <RLAssessment />
+          <PopulationTrend />
+          <MatureIndividuals />
+          <Habitat />
+          <Taxonomy />
+          <AssessmentInfo />
+          <GeographicRange />
+          <Population />
+          <ExtendedEcology />
+          <Threats />
+          <UseTrade />
+          <Conservation />
         </Column>
       </ScrollView>
     </>
